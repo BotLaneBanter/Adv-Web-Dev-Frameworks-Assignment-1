@@ -12,7 +12,6 @@
 				<li><a href="index.php?controller=Courses">Courses</a></li>
 				<li><a href="index.php?controller=Streams">Streams</a></li>
 				<li><a href="index.php?controller=AboutUs">About Us</a></li>
-				<li><a href="index.php?controller=Login">Login</a></li>
 				<li><a href="index.php?controller=SignUp">Sign Up</a></li>
 			</ul>
 		</nav>
@@ -22,8 +21,8 @@
 			<p class="login-box-msg">Be Curious - Sign In</p>
 			<p class="login-box-msg " style="color:#000000">
 			<?php 
-			if(isset($successfulSignUp["successfulSignUp"])){
-				echo $successfulSignUp["successfulSignUp"];
+			if(isset($_GET["successfulSignUp"])){
+				echo $_GET["successfulSignUp"];
 			}
 			//if(isset($_POST['SignUpSuccess'])){
 			//	echo "Sign Up Successful, Please login below";
