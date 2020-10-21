@@ -20,7 +20,6 @@
 					echo "<li><a href='profile.php?controller=Login'>Login</a></li>";
 				}
 				?>
-				<li><a href="profile.php?controller=SignUp">Sign Up</a></li>
 			</ul>
 		</nav>
 		<main>

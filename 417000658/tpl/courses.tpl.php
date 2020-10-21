@@ -9,18 +9,19 @@
 		<nav>
 			<a href="#"><img src="images/logo.png" alt="UWI online"></a>
 			<ul>
-				<li><a href="">Courses</a></li>
 				<li><a href="courses.php?controller=Streams">Streams</a></li>
 				<li><a href="courses.php?controller=AboutUs">About Us</a></li>
 				<?php 
 				if(isset($_SESSION)){
+					echo "<li><a href='courses.php?controller=Profile'>Profile</a></li>";
 					echo "<li><a href='courses.php?controller=Logout'>Logout</a></li>";
 				}
 				else{
 					echo "<li><a href='courses.php?controller=Login'>Login</a></li>";
+					echo "<li><a href=\"courses.php?controller=SignUp\">Sign Up</a></li>";
 				}
 				?>
-				<li><a href="courses.php?controller=SignUp">Sign Up</a></li>
+				
 			</ul>
 		</nav>
 		<main>

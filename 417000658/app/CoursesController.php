@@ -27,6 +27,9 @@ public function run(){
         $session->destroy();
         header('Location: index.php');
     }
+    else if((isset($_GET['controller'])) && ($_GET['controller'] == 'Profile')){
+        header('Location: profile.php');
+    }
     //If logout was clicked create a logout object and call the logout
     //Function to logout the user
     else if((isset($_GET['controller'])) && ($_GET['controller'] == 'Logout')){

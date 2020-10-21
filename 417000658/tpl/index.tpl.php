@@ -12,8 +12,17 @@
 				<li><a href="index.php?controller=Courses">Courses</a></li>
 				<li><a href="index.php?controller=Streams">Streams</a></li>
 				<li><a href="index.php?controller=AboutUs">About Us</a></li>
-				<li><a href='index.php?controller=Login'>Login</a></li>
-				<li><a href="index.php?controller=SignUp">Sign Up</a></li>
+				<?php 
+				$session = new SessionClass();
+				$session->create();
+				if(!empty($session->receive("Email"))){
+					echo "<li><a href='index.php?controller=Logout'>Logout</a></li>";
+				}
+				else{
+					echo "<li><a href='index.php?controller=Login'>Login</a></li>";
+					echo "<li><a href=\"index.php?controller=SignUp\">Sign Up</a></li>";
+				}
+				?>
 			</ul>
 		</nav>
 		<div id="lead-in">

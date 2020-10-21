@@ -5,6 +5,8 @@ class IndexController extends Controller{
 
 public function run(){
     
+    
+
     //Check if Login was clicked
 		if((isset($_GET['controller'])) && ($_GET['controller'] == 'Login')){
 			//require "login.php";
@@ -13,6 +15,10 @@ public function run(){
         else if((isset($_GET['controller'])) && ($_GET['controller'] == 'SignUp')){
 			//require "SignUp.php";
             header('Location: signup.php');
+        }
+        else if((isset($_GET['controller'])) && ($_GET['controller'] == 'Logout')){
+			$logout = new Logout();
+            $logout->logOutUser();
         }
     else{
 

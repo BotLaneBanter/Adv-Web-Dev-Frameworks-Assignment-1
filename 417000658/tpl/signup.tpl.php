@@ -13,7 +13,6 @@
 				<li><a href="signup.php?controller=Streams">Streams</a></li>
 				<li><a href="signup.php?controller=AboutUs">About Us</a></li>
 				<li><a href="index.php?controller=Login">Login</a></li>
-				<li><a href="">Sign Up</a></li>
 			</ul>
 		</nav>
 		<main>
